@@ -1,0 +1,29 @@
+{
+ "background_page": "background.html",
+ "browser_action": {
+ "default_icon": "icon-128.png"
+ },
+ "name": "WWW::Nyan",
+ "description": "WWW::Nyan",
+ "homepage_url": "http://kksg.net",
+ "icons": {
+     "128": "icon-128.png" },
+ "permissions": [
+     "tabs",
+     "http://*/*",
+     "https://*/*"
+ ],
+ "version": "0.1",
+ "content_scripts":[
+    {
+      "matches":[
+        "http://*/*",
+        "https://*/*"
+        ],
+      "js":["nyan.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ]
+
+}
